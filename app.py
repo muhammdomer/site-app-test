@@ -9,7 +9,7 @@ SESSION_TIMEOUT = 1800  # 30 minutes
 MAX_LOGIN_ATTEMPTS = 3
 
 # Initialize Fernet cipher
-key = st.secrets["ENCRYPTION_KEY"]
+key = st.secrets["ENCRYPTION_KEY"]["value"]
 cipher = Fernet(key.encode())
 
 def safe_display_date(date_value):
